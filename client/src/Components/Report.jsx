@@ -35,7 +35,7 @@ const Report = () => {
 
  
   try {
-    const response = await axios.get(`http://localhost:5000/expense/search/month/${userId}?date=${date}`,{headers});
+    const response = await axios.get(`https://exapnse-backend.onrender.com/expense/search/month/${userId}?date=${date}`,{headers});
      console.log(response);
      const formattedDates = response.data.map(item => {
       const formattedDate = format(new Date(item.createdAt), ' MMMM ');
@@ -67,7 +67,7 @@ console.log(monthData);
 
    
     try {
-      const response = await axios.get(`http://localhost:5000/expense/search/day/${userId}?date=${date}`,{headers});
+      const response = await axios.get(`https://exapnse-backend.onrender.com/expense/search/day/${userId}?date=${date}`,{headers});
        console.log(response);
        const formattedDates = response.data.map(item => {
         const formattedDate = format(new Date(item.createdAt), 'dd, MMMM yyyy');

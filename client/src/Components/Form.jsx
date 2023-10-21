@@ -33,7 +33,7 @@ const state=isSignup?"signup":"login";
 const signup= async()=>{
   try {
 
-    const res=await axios.post(`http://localhost:5000/auth/${state}`,form);
+    const res=await axios.post(`https://exapnse-backend.onrender.com/auth/${state}`,form);
     localStorage.setItem("token",JSON.stringify(res.data.token));
     localStorage.setItem("userId",JSON.stringify(res.data.result._id));
     localStorage.setItem("isPremium",JSON.stringify(res.data.result.isPremium));

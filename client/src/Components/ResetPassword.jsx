@@ -21,7 +21,7 @@ const ResetPassword = () => {
         if(confirmPassword !== password){
             alert("password is not equal");
         };
-        const res=await axios.put(`http://localhost:5000/auth/reset-password/${resetToken}`,{password});
+        const res=await axios.put(`https://exapnse-backend.onrender.com/auth/reset-password/${resetToken}`,{password});
         console.log(res);
         toast("Password Reset Successfully");
         navigate("/form")

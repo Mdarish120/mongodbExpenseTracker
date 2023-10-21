@@ -68,7 +68,7 @@ const userId = JSON.parse(localStorage.getItem('userId')); //
 console.log(headers);
   
       try {
-     const response = await axios.post(`http://localhost:5000/payment/${userId}`,{name:"Premium",desc:"Buy Description",amount:500},{headers});
+     const response = await axios.post(`https://exapnse-backend.onrender.com/payment/${userId}`,{name:"Premium",desc:"Buy Description",amount:500},{headers});
        const res = response.data;
         console.log(response);
   

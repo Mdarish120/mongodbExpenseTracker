@@ -11,7 +11,7 @@ const ForgetPassword = () => {
 
     const handleSubmit= async(e)=>{
        e.preventDefault();
-       const res=await axios.post("http://localhost:5000/auth/forget-password",{email});
+       const res=await axios.post("https://exapnse-backend.onrender.com/auth/forget-password",{email});
        console.log(res);
        toast("Password reset email sent. Check your inbox");
 

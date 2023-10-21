@@ -35,7 +35,7 @@ const AddExpenses = () => {
       Authorization: `Bearer ${token}`,
     }
     try {
-      const response = await axios.get(`http://localhost:5000/expense/${userId}?page=${page+1}&perPage=${rowsPerPage}`,{headers});
+      const response = await axios.get(`https://exapnse-backend.onrender.com/expense/${userId}?page=${page+1}&perPage=${rowsPerPage}`,{headers});
    
      console.log(response)
 
@@ -87,7 +87,7 @@ const AddExpenses = () => {
 
   if(isEdit && id){
 
-    const res=await axios.put(`http://localhost:5000/expense/${id}`,{category,description,amount},{headers});
+    const res=await axios.put(`https://exapnse-backend.onrender.com/expense/${id}`,{category,description,amount},{headers});
     console.log(res);
     setIsEdit(false);
     setAmount("");
@@ -96,7 +96,7 @@ const AddExpenses = () => {
     fetchData(page, rowsPerPage);
 
   }else{
-    const res=await axios.post(`http://localhost:5000/expense/${userId}`,{category,description,amount},{headers});
+    const res=await axios.post(`https://exapnse-backend.onrender.com/expense/${userId}`,{category,description,amount},{headers});
     console.log(res); 
     setAmount("");
     setCategory("");

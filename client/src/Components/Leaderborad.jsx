@@ -24,7 +24,7 @@ const fetchData= async()=>{
  
 
    try {
-    const res=await axios.get(`http://localhost:5000/leaderboard`,{headers});
+    const res=await axios.get(`https://exapnse-backend.onrender.com/leaderboard`,{headers});
     setData(res.data.sort((a,b)=>b.totalExpenses-a.totalExpenses));
     console.log(res);
    } catch (error) {

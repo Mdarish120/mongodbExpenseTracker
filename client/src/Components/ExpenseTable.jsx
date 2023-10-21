@@ -36,7 +36,7 @@ const ExpenseTable = ({setAmount,setDescription,setCategory,setIsEdit,setId,page
       }
       
       try {
-           const res=await axios.delete(`http://localhost:5000/expense/${id}`,{headers});
+           const res=await axios.delete(`https://exapnse-backend.onrender.com/expense/${id}`,{headers});
            console.log(res);
            fetchData(page, rowsPerPage);
       } catch (error) {
