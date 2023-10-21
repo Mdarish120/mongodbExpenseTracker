@@ -35,7 +35,7 @@ export const signup = async (req, res) => {
     res.status(201).json({ result: createUser, token });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ message: 'Something went wrong' });
+    res.status(500).json({ message: 'Something went wrong in the server side' });
   }
 };
 
